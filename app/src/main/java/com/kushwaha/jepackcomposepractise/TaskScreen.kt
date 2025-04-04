@@ -16,6 +16,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -29,6 +30,8 @@ fun TaskScreen(viewModel: TaskViewModel) {
     var newTaskTitle by remember { mutableStateOf(TextFieldValue()) }
     var showDialog by remember { mutableStateOf(false) }
     var currentTask by remember { mutableStateOf<Task?>(null) }
+
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     Column(
         modifier = Modifier
@@ -66,6 +69,7 @@ fun TaskScreen(viewModel: TaskViewModel) {
                 if (newTaskTitle.text.isNotEmpty()) {
                     viewModel.addTask(newTaskTitle.text)
                     newTaskTitle = TextFieldValue()
+                    keyboardController?.hide()
                 }
             }),
             colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -74,7 +78,22 @@ fun TaskScreen(viewModel: TaskViewModel) {
             )
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Button(
+            onClick = {
+                if (newTaskTitle.text.isNotEmpty()) {
+                    viewModel.addTask(newTaskTitle.text)
+                    newTaskTitle = TextFieldValue()
+                    keyboardController?.hide()
+                }
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Add Task", fontSize = 18.sp)
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         // Task List with Animation
         LazyColumn {
