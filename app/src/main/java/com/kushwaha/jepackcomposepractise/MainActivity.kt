@@ -10,6 +10,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.room.*
+import com.google.firebase.FirebaseApp
 import com.kushwaha.jepackcomposepractise.Retrofit.RetrofitInstance
 import com.kushwaha.jepackcomposepractise.RoomDb.Task
 import com.kushwaha.jepackcomposepractise.RoomDb.TaskDatabase
@@ -22,7 +23,8 @@ import kotlinx.coroutines.launch
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+//        FirebaseApp.initializeApp(this)
+//        enableEdgeToEdge()
         setContent {
             MaterialTheme {
                 val taskViewModel: TaskViewModel = viewModel()
@@ -31,6 +33,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+//fun forceCrash() {
+//    throw RuntimeException("Test Crash for Firebase Crashlytics")
+//}
+
 
 class TaskViewModel(application: Application) : AndroidViewModel(application) {
     private val database = Room.databaseBuilder(
@@ -64,6 +71,7 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             val task = Task(title = title, completed = false)
             repository.insertTask(task)
+//            forceCrash()
         }
     }
 
