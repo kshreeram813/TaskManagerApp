@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise.ui.theme
+package com.kushwaha.MyTasks.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

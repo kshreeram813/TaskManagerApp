@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise
+package com.kushwaha.MyTasks
 
 import org.junit.Test
 

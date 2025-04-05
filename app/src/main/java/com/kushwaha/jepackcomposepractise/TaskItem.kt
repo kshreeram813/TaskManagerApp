@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise
+package com.kushwaha.MyTasks
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.*
@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.kushwaha.jepackcomposepractise.RoomDb.Task
+import com.kushwaha.MyTasks.RoomDb.Task
 
 @Composable
 fun TaskItem(task: Task, viewModel: TaskViewModel, onRenameClick: (Task) -> Unit) {

@@ -1,6 +1,6 @@
-package com.kushwaha.jepackcomposepractise.Retrofit
+package com.kushwaha.MyTasks.Retrofit
 
-import com.kushwaha.jepackcomposepractise.RoomDb.Task
+import com.kushwaha.MyTasks.RoomDb.Task
 import retrofit2.http.GET
 
 interface TaskApi {

@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise
+package com.kushwaha.MyTasks
 
 import android.app.Application
 import android.os.Bundle
@@ -11,10 +11,10 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.room.*
 import com.google.firebase.FirebaseApp
-import com.kushwaha.jepackcomposepractise.Retrofit.RetrofitInstance
-import com.kushwaha.jepackcomposepractise.RoomDb.Task
-import com.kushwaha.jepackcomposepractise.RoomDb.TaskDatabase
-import com.kushwaha.jepackcomposepractise.RoomDb.TaskRepository
+import com.kushwaha.MyTasks.Retrofit.RetrofitInstance
+import com.kushwaha.MyTasks.RoomDb.Task
+import com.kushwaha.MyTasks.RoomDb.TaskDatabase
+import com.kushwaha.MyTasks.RoomDb.TaskRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest

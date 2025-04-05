@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise.Retrofit
+package com.kushwaha.MyTasks.Retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise
+package com.kushwaha.MyTasks
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -9,7 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.kushwaha.jepackcomposepractise.RoomDb.Task
+import com.kushwaha.MyTasks.RoomDb.Task
 
 @Composable
 fun RenameTaskDialog(task: Task, onDismiss: () -> Unit, onRename: (String) -> Unit) {

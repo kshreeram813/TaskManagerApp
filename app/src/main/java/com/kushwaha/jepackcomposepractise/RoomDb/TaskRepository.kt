@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise.RoomDb
+package com.kushwaha.MyTasks.RoomDb
 
 class TaskRepository(private val taskDao: TaskDao) {
     fun getTasks() = taskDao.getAllTasks()

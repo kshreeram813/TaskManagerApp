@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise
+package com.kushwaha.MyTasks
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.wrapContentSize
@@ -16,7 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.kushwaha.jepackcomposepractise.RoomDb.Task
+import com.kushwaha.MyTasks.RoomDb.Task
 
 @Composable
 fun DropdownMenuTask(task: Task, viewModel: TaskViewModel, onRenameClick: (Task) -> Unit) {

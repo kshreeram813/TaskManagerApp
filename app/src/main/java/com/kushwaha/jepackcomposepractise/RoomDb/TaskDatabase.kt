@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise.RoomDb
+package com.kushwaha.MyTasks.RoomDb
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

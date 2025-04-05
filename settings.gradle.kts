@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "JepackComposePractise"
+rootProject.name = "MyTasks"
 include(":app")

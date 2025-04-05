@@ -1,4 +1,4 @@
-package com.kushwaha.jepackcomposepractise.RoomDb
+package com.kushwaha.MyTasks.RoomDb
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

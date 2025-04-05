@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kushwaha.jepackcomposepractise"
+    namespace = "com.kushwaha.MyTasks"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.kushwaha.jepackcomposepractise"
+        applicationId = "com.kushwaha.MyTasks"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
