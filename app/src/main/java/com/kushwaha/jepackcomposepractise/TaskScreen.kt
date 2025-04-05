@@ -33,6 +33,9 @@ fun TaskScreen(viewModel: TaskViewModel) {
 
     val keyboardController = LocalSoftwareKeyboardController.current
 
+    // Sort tasks to put completed ones at the top
+    val sortedTasks = tasks.sortedByDescending { it.completed }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -97,7 +100,7 @@ fun TaskScreen(viewModel: TaskViewModel) {
 
         // Task List with Animation
         LazyColumn {
-            items(tasks, key = { it.id }) { task ->
+            items(sortedTasks, key = { it.id }) { task ->
                 AnimatedVisibility(
                     visible = true,
                     enter = fadeIn() + slideInVertically(),
